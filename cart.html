@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Shop Item </title>
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/shop-item.css" rel="stylesheet"> 
+	<script src="http://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/hmac-sha1.js"></script>
+</head>
+
+<body> 
+<div id="citrusWallet" >
+</div>
+    <!-- Page Content -->
+    <div class="container" style=" width:100%;text-align:center !important;">
+        <div class="row" style="text-align:center !important;">
+            <div class="col-md-9">
+					<div class="thumbnail">				
+                    <img class="img-responsive" src="images/glasses.jpeg" alt="">
+                    <div class="caption-full">
+                        <h4 class="pull-right">Rs.1.0</h4>
+                        <h4>
+						<a href="#">New Collection of <br />sunglasses For Men By Ray Ban</a>
+                        </h4>
+                        <p>See more glasses like these online store reviews at <a href="#">GetGlasses - http://getGlasses.com</a>.</p>
+                        <p>Want to make these reviews work? Check out
+                            <strong><a href="#">Our review portal</a>
+                            </strong>
+						</p>                        
+                    </div>
+                    <div class="ratings">
+                        <p class="pull-right">																			 
+						</p>
+                        <p>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star-empty"></span>
+                            4.0 stars
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-9">
+				<input type="submit" id="trigger-citrus-pay" class="btn btn-success" value="Place Order" />	
+            </div>
+        </div>
+    </div>
+	<script type="text/javascript" src = "js/citrusIframe.js"></script>
+	<script>	
+			var amount = "1.0";
+			var mtx = 'mtx_'+ new Date().getTime();
+			var accessKey ="18IZE4MDYJTCKUCJ3N67";
+			var secretKey = "259fe54d60ff40cf244702ab62cc8befa1d3d11c";
+			var data = "merchantAccessKey="+accessKey+"&transactionId="+mtx+"&amount="+amount;
+			var hash = CryptoJS.HmacSHA1(data, secretKey);
+            var signature = hash.toString(CryptoJS.enc.Hex);
+			var iframePar = document.getElementById('citrusWallet');
+			
+			var citrusUserJsonData = {
+				orderAmount: amount,
+				txnId: mtx,				
+				requestSignature: signature,
+				removeIF: iframePar,
+				returnUrl: 'http://localhost/citrusWallet/rep.php'
+			}
+			document.getElementById('trigger-citrus-pay').addEventListener('click', function(){
+			citrusWalletPopUp.process_request(JSON.stringify(citrusUserJsonData));
+		}, false);
+	</script>
+</body>
+</html>

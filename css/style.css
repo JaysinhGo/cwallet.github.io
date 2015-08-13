@@ -1,0 +1,196 @@
+*{    
+	margin:0;
+	padding:0;	
+}
+body{
+	font: normal 10px tahoma;
+	background-color:gray;
+}
+.demoBody{
+	margin:100px auto;
+	width:50%;
+}
+.nav{
+	width:100%;
+	text-align:center;
+}
+.nav span{
+	text-align:center;
+	display:inline-block;
+	margin:0 5px;
+	width:150px;
+	padding:15px 0;
+	color:white;
+	font-size:14px;
+
+	background: -webkit-linear-gradient(#fdc942 ,#f75b04);
+	background: -o-linear-gradient(#fdc942 ,#f75b04);
+	background: -moz-linear-gradient(#fdc942 ,#f75b04);
+	background: linear-gradient(#fdc942 ,#f75b04);
+
+	/*background: -webkit-linear-gradient(#449d44 ,#398439);*/
+	/*background: -o-linear-gradient(#449d44 ,#398439);*/
+	/*background: -moz-linear-gradient(#449d44 ,#398439);*/
+	/*background: linear-gradient(#449d44 ,#398439);*/
+	cursor:pointer;
+	border-radius: 25px 0 25px 0;
+}
+.section{
+	width:100%;
+	height:300px;
+	margin-top:20px;
+	background:white;
+	box-shadow: 0px 0px 10px #ffffff;
+}
+.pg{
+	margin:0 auto;
+	width:80%;
+	padding-top:20px;
+}
+/* ................................btn................................. */
+
+.pg button{
+	text-align: center;
+	width: 150px;
+	padding: 10px 0;
+	border: none;
+	color: white;
+	font-size: 16px;
+	border-radius: 7px;
+	cursor: pointer;
+	font-weight: normal;
+	display: inline-block;
+	background: -webkit-linear-gradient(#fdc942 ,#f75b04);
+	background: -o-linear-gradient(#fdc942 ,#f75b04);
+	background: -moz-linear-gradient(#fdc942 ,#f75b04);
+	background: linear-gradient(#fdc942 ,#f75b04);
+
+	/*background: -webkit-linear-gradient(#449d44 ,#398439);*/
+	/*background: -o-linear-gradient(#449d44 ,#398439);*/
+	/*background: -moz-linear-gradient(#449d44 ,#398439);*/
+	/*background: linear-gradient(#449d44 ,#398439);*/
+}
+/* ................................netbanking ............................. */
+
+.SelectBox{
+	text-align:center;
+	margin:15px 0;
+}
+.SelectBox select{
+	outline:0;
+	background-repeat: no-repeat;
+	background-position: 300px;
+	width: 260px;
+	padding: 5px;
+	margin-top: 8px;
+	line-height: 1;
+	border-radius: 0px;
+	background-color: #FFFFFF;
+	color: gray;
+	font-size: 12px;
+	outline: none;
+}
+
+/* ................................card Payment ............................. */
+.CreditDebitCard{
+	text-align:center;
+	margin-top:25px;
+}
+.CreditDebitCard input{
+	border-color: #eeeeee;
+	border-radius: 7px;
+	width: 265px;
+	height: 30px;
+	border: 2px solid #eeeeee;
+	text-indent: 10px;
+	font-weight: 300;
+	font-size: 18px;
+	color: #598C9E;
+	background: url('images/blank.png') no-repeat scroll 220px 3px;
+	background-size: 40px;
+}
+.CreditDebitCard input:focus{
+	border: 2px solid #C8C8C8;
+	outline: 0;
+}
+.CitrusBank input{
+	border-color: #eeeeee;
+	border-radius: 7px;
+	width: 265px;
+	height: 30px;
+	border: 2px solid #eeeeee;
+	text-indent: 10px;
+	font-weight: 300;
+	font-size: 18px;
+	color: #598C9E;
+}
+.CitrusBank input:focus{
+	border: 2px solid #C8C8C8;
+	outline: 0;
+}
+
+
+.ExpCvv{	
+	margin:10px auto; 
+	width: 275px;
+}
+
+/* ................................Saved Accounts ............................. */
+.savedAccounts{
+	vertical-align:middle;
+	vertical-align: middle;
+	height: 230px;
+	overflow-y: auto;
+	box-shadow: 0px 0px 10px rgbA(1,1,1,0.2);
+}
+.savedAccounts li{
+	text-indent:20px;
+	vertical-align:middle;
+	border-bottom:2px solid rgba(0,0,0,0.1);
+	padding: 5px 0;
+}
+.savedAccountsRadio{
+	vertical-align:middle;
+	margin-left:10px;
+}
+.savedAccountsImg{
+	vertical-align:middle;
+	margin-left:10px;
+}
+.savedAccountsCard{
+	vertical-align:middle;
+	font-size:12px;
+	color: #598C9E;
+	margin-left:10px;
+}
+.savedAccountsCvv{
+	vertical-align:middle;
+	border-color: #eeeeee;
+	border-radius: 7px;
+	width: 70px;
+	height: 30px;
+	border: 2px solid #eeeeee;
+	text-indent: 10px;
+	font-weight: 300;
+	font-size: 18px;
+	color: #598C9E;
+	margin-left:10px;
+}
+input[type="button"]:disabled {
+	background: grey;
+}
+.errorMessage
+{
+	padding:10px;
+	color:red;font-size:14px;font-style:normal;
+}
+.spinnerDiv
+{
+	height:100%;width:100%;position:absolute;top:250px;
+}
+.loginLabel
+{
+	display: inline-block;
+	font-size: 15px;
+	width: 115px;
+}
